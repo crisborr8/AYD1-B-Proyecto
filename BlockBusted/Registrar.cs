@@ -15,5 +15,13 @@ namespace BlockBusted
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!this.txtPassword.Text.Equals(this.txtConfirmPassword.Text))
+            {
+                MessageBox.Show("ERROR: Las contraseñas no coinciden");
+            }
+        }
     }
 }
