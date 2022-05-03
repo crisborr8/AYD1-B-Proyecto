@@ -63,19 +63,11 @@
     <Compile Include="Admin_Home.Designer.cs">
       <DependentUpon>Admin_Home.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="fAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fAlquiler.Designer.cs">
-      <DependentUpon>fAlquiler.cs</DependentUpon>
-=======
     <Compile Include="Alquiler.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Alquiler.Designer.cs">
       <DependentUpon>Alquiler.cs</DependentUpon>
->>>>>>> develop
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -83,16 +75,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Models\alquiler.cs" />
-=======
     <Compile Include="Lenguajes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Lenguajes.Designer.cs">
       <DependentUpon>Lenguajes.cs</DependentUpon>
     </Compile>
->>>>>>> develop
     <Compile Include="Models\Conexion.cs" />
     <Compile Include="Models\lenguaje.cs" />
     <Compile Include="Models\Pelicula.cs" />
@@ -132,13 +120,8 @@
     <EmbeddedResource Include="Admin_Home.resx">
       <DependentUpon>Admin_Home.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="fAlquiler.resx">
-      <DependentUpon>fAlquiler.cs</DependentUpon>
-=======
     <EmbeddedResource Include="Alquiler.resx">
       <DependentUpon>Alquiler.cs</DependentUpon>
->>>>>>> develop
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -172,13 +155,9 @@
       <DependentUpon>User_Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-<<<<<<< HEAD
-    <None Include="Properties\DataSources\BlockBusted.Models.alquiler.datasource" />
-=======
     <None Include="BlockBusted.Models.lenguaje.datasource" />
     <None Include="BlockBusted.Models.Pelicula.datasource" />
     <None Include="BlockBusted.Models.Usuario.datasource" />
->>>>>>> develop
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
