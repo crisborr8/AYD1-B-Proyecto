@@ -58,5 +58,40 @@ namespace BlockBusted.Models
             }
         }
 
+        public int insertarEnAlquiler(String emailUser, int idPelicula, Double total)
+        {
+            DataSet datos = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(constr))
+                {
+                    con.Open();
+                    using (MySqlCommand command = new MySqlCommand("sp_alquilar_pelicula", con))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@i_email", emailUser);
+                        command.Parameters.AddWithValue("@i_pelicula", idPelicula);
+                        command.Parameters.AddWithValue("@i_total_alquiler", total);
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(datos, "data");
+
+                            con.Close();
+
+                        }
+
+                    }
+                }
+                return 1;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
+                return 0;
+            }
+        }
+
     }
 }
