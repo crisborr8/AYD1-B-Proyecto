@@ -11,9 +11,27 @@ namespace BlockBusted
 {
     public partial class User_Home : Form
     {
-        public User_Home()
+        String usuario, email;
+
+        private void btn_Alquilar_Click(object sender, EventArgs e)
+        {
+            Alquiler conn = new Alquiler(this.email);
+            conn.Show();
+        }
+
+        private void btn_Ver_Click(object sender, EventArgs e)
+        {
+            PeliculasCompradas conn = new PeliculasCompradas(this.email);
+            conn.Show();
+        }
+
+        public User_Home(String usuario, String email)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            this.email = email;
+            lbl_Usuario.Text = usuario;
+            lbl_Emal.Text = email;
         }
     }
 }

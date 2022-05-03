@@ -43,7 +43,9 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -80,17 +82,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(132, 174);
+            this.label4.Location = new System.Drawing.Point(132, 229);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(256, 29);
+            this.label4.Size = new System.Drawing.Size(74, 29);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Fecha de nacimiento";
+            this.label4.Text = "Edad";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(132, 219);
+            this.label5.Location = new System.Drawing.Point(132, 274);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 29);
             this.label5.TabIndex = 4;
@@ -100,7 +102,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(132, 258);
+            this.label6.Location = new System.Drawing.Point(132, 313);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 29);
             this.label6.TabIndex = 5;
@@ -110,7 +112,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(132, 303);
+            this.label7.Location = new System.Drawing.Point(132, 358);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 29);
             this.label7.TabIndex = 6;
@@ -120,7 +122,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(132, 347);
+            this.label8.Location = new System.Drawing.Point(132, 402);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(262, 29);
             this.label8.TabIndex = 7;
@@ -128,35 +130,35 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(476, 90);
+            this.txtNombre.Location = new System.Drawing.Point(467, 78);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(528, 22);
             this.txtNombre.TabIndex = 8;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(476, 136);
+            this.txtApellido.Location = new System.Drawing.Point(467, 131);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(528, 22);
             this.txtApellido.TabIndex = 9;
             // 
             // txtDPI
             // 
-            this.txtDPI.Location = new System.Drawing.Point(476, 228);
+            this.txtDPI.Location = new System.Drawing.Point(467, 281);
             this.txtDPI.Name = "txtDPI";
             this.txtDPI.Size = new System.Drawing.Size(528, 22);
             this.txtDPI.TabIndex = 11;
             // 
             // txtNickname
             // 
-            this.txtNickname.Location = new System.Drawing.Point(476, 270);
+            this.txtNickname.Location = new System.Drawing.Point(467, 320);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.Size = new System.Drawing.Size(528, 22);
             this.txtNickname.TabIndex = 12;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(476, 312);
+            this.txtPassword.Location = new System.Drawing.Point(467, 365);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(528, 22);
@@ -165,7 +167,7 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(476, 354);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(467, 409);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(528, 22);
@@ -174,7 +176,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(723, 400);
+            this.button1.Location = new System.Drawing.Point(714, 452);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(281, 58);
             this.button1.TabIndex = 15;
@@ -182,12 +184,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dateTimePicker1
+            // label9
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(476, 186);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(528, 22);
-            this.dateTimePicker1.TabIndex = 16;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(132, 178);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 29);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Email";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(467, 184);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(528, 22);
+            this.textBox1.TabIndex = 18;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(467, 236);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(528, 22);
+            this.textBox2.TabIndex = 19;
             // 
             // Registrar
             // 
@@ -195,7 +214,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BlockBusted.Properties.Resources.imagen1;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtPassword);
@@ -211,7 +232,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar";
@@ -237,6 +258,8 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

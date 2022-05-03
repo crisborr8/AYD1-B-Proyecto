@@ -8,54 +8,22 @@ using System.Threading.Tasks;
 
 namespace BlockBusted.Models
 {
-    class Pelicula
+    public class Usuario
     {
-        public int CODIGO { get; set; }
-        public string NOMBRE_PELICULA { get; set; }
-        public string PRECIO_X_DIA { get; set; }
-        public string PORTADA_PELICULA { get; set; }
-        public string VIDEO { get; set; }
-        public string HABILITADA { get; set; }
-        public string PLAN_ALQUILER { get; set; }
+        public string email { get; set; }
+        public string alias { get; set; }
+        public string clave { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string edad { get; set; }
+        public string dpi { get; set; }
 
 
         string constr = Conexion.ConnectionString;
 
-        public Pelicula()
+        public Usuario()
         {
 
-        }
-
-        public DataSet getPeliculasCompradas(String email)
-        {
-            DataSet datos = new DataSet();
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(constr))
-                {
-                    con.Open();
-                    using (MySqlCommand command = new MySqlCommand("sp_ver_peliculas_alquiladas_x_usr", con))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@i_email", email);
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
-                        {
-                            DataTable dt = new DataTable();
-                            sda.Fill(datos, "data");
-
-                            con.Close();
-
-                        }
-
-                    }
-                }
-                return datos;
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
-                return null;
-            }
         }
 
         public DataSet consulta()
@@ -66,10 +34,10 @@ namespace BlockBusted.Models
                 using (MySqlConnection con = new MySqlConnection(constr))
                 {
                     con.Open();
-                    using (MySqlCommand command = new MySqlCommand("sp_ver_lista_peliculas", con))
+                    using (MySqlCommand command = new MySqlCommand("sp_ver_cuentas", con))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                      //  command.Parameters.AddWithValue("@i_repuesto", -1);
+                        //command.Parameters.AddWithValue("@i_repuesto", -1);
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
                         {
                             DataTable dt = new DataTable();
@@ -90,7 +58,7 @@ namespace BlockBusted.Models
             }
         }
 
-        public int insertarEnAlquiler(String emailUser, int idPelicula, Double total)
+        public DataSet Login(Usuario usuario)
         {
             DataSet datos = new DataSet();
             try
@@ -98,36 +66,32 @@ namespace BlockBusted.Models
                 using (MySqlConnection con = new MySqlConnection(constr))
                 {
                     con.Open();
-                    using (MySqlCommand command = new MySqlCommand("sp_alquilar_pelicula", con))
+                    using (MySqlCommand command = new MySqlCommand("sp_login_usuario", con))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@i_email", emailUser);
-                        command.Parameters.AddWithValue("@i_pelicula", idPelicula);
-                        command.Parameters.AddWithValue("@i_total_alquiler", total);
-
+                        command.Parameters.AddWithValue("@i_email", (usuario.email));
+                        command.Parameters.AddWithValue("@i_password", (usuario.clave));
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
                         {
                             DataTable dt = new DataTable();
                             sda.Fill(datos, "data");
-
                             con.Close();
-
                         }
 
                     }
                 }
-                return 1;
+                return datos;
             }
             catch (MySqlException ex)
             {
                 Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
-                return 0;
+                return null;
             }
         }
 
-
-        public int insertarUsuario(String email, String nickname, String password,String nombre, String apellido,int edad, String dpi)
+        public int Insert(Usuario usuario)
         {
+            int id = 0;
             DataSet datos = new DataSet();
             try
             {
@@ -137,19 +101,19 @@ namespace BlockBusted.Models
                     using (MySqlCommand command = new MySqlCommand("sp_registro_usuario", con))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@i_email", email);
-                        command.Parameters.AddWithValue("@i_usuario", nickname);
-                        command.Parameters.AddWithValue("@i_password", password);
-                        command.Parameters.AddWithValue("@i_nombre", nombre);
-                        command.Parameters.AddWithValue("@i_apellido", apellido);
-                        command.Parameters.AddWithValue("@i_dpi", dpi);
-                        command.Parameters.AddWithValue("@i_edad", edad);
-                       
+                        command.Parameters.AddWithValue("@i_usuario", usuario.alias);
+                        command.Parameters.AddWithValue("@i_email", (usuario.email));
+                        command.Parameters.AddWithValue("@i_nombre", (usuario.nombre));
+                        command.Parameters.AddWithValue("@i_apellido", (usuario.apellido));
+                        command.Parameters.AddWithValue("@i_dpi", (usuario.dpi));
+                        command.Parameters.AddWithValue("@i_edad", Convert.ToInt32(usuario.edad));
+                        command.Parameters.AddWithValue("@i_password", (usuario.clave));
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
                         {
                             DataTable dt = new DataTable();
                             sda.Fill(datos, "data");
+                            id = 1;
 
                             con.Close();
 
@@ -157,7 +121,7 @@ namespace BlockBusted.Models
 
                     }
                 }
-                return 1;
+                return id;
             }
             catch (MySqlException ex)
             {
@@ -166,5 +130,47 @@ namespace BlockBusted.Models
             }
         }
 
+        public int Update(Usuario usuario)
+        {
+            int id = 0;
+            DataSet datos = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(constr))
+                {
+                    con.Open();
+                    using (MySqlCommand command = new MySqlCommand("sp_editar_usuario", con))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@i_usuario", usuario.alias);
+                        command.Parameters.AddWithValue("@i_email", (usuario.email));
+                        command.Parameters.AddWithValue("@i_nombre", (usuario.nombre));
+                        command.Parameters.AddWithValue("@i_apellido", (usuario.apellido));
+                        command.Parameters.AddWithValue("@i_dpi", (usuario.dpi));
+                        command.Parameters.AddWithValue("@i_edad", Convert.ToInt32(usuario.edad));
+                        command.Parameters.AddWithValue("@i_password", (usuario.clave));
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(datos, "data");
+                            id = 1;
+
+                            con.Close();
+
+                        }
+
+                    }
+                }
+                return id;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
+                return 0;
+            }
+        }
     }
 }
