@@ -15,12 +15,14 @@ namespace BlockBusted
         //Variable que contendrá todos los datos de la transaccion de peliculas
         DataGridView datosAlquiler;
         Models.Pelicula alquiler = new Models.Pelicula();
-        public PagoTarjeta(DataGridView datos)
+        String email;
+        public PagoTarjeta(DataGridView datos,String email)
         {
             this.datosAlquiler = datos;
             //this.totalAlquiler();
             InitializeComponent();
             this.totalAlquiler();
+            this.email = email;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace BlockBusted
                 {
                     int id = Convert.ToInt32(this.datosAlquiler.Rows[i].Cells[0].Value.ToString());
                     Double total = Convert.ToDouble(this.datosAlquiler.Rows[i].Cells[2].Value.ToString());
-                    alquiler.insertarEnAlquiler("soluna@gmail.com", id, total);
+                    alquiler.insertarEnAlquiler(this.email, id, total);
                 }
             }
         }
