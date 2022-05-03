@@ -26,6 +26,38 @@ namespace BlockBusted.Models
 
         }
 
+        public DataSet getPeliculasCompradas(String email)
+        {
+            DataSet datos = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(constr))
+                {
+                    con.Open();
+                    using (MySqlCommand command = new MySqlCommand("sp_ver_peliculas_alquiladas_x_usr", con))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@i_email", email);
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(datos, "data");
+
+                            con.Close();
+
+                        }
+
+                    }
+                }
+                return datos;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
+                return null;
+            }
+        }
+
         public DataSet consulta()
         {
             DataSet datos = new DataSet();
