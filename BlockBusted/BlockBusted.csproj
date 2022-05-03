@@ -73,7 +73,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lenguajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lenguajes.Designer.cs">
+      <DependentUpon>Lenguajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Conexion.cs" />
+    <Compile Include="Models\lenguaje.cs" />
     <Compile Include="Models\Pelicula.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Usuarios.cs">
@@ -111,6 +118,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lenguajes.resx">
+      <DependentUpon>Lenguajes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +144,7 @@
       <DependentUpon>User_Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="BlockBusted.Models.lenguaje.datasource" />
     <None Include="BlockBusted.Models.Pelicula.datasource" />
     <None Include="BlockBusted.Models.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
