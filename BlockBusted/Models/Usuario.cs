@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BlockBusted.Models
 {
-    class Usuario
+    public class Usuario
     {
         public string email { get; set; }
         public string alias { get; set; }
@@ -45,6 +45,37 @@ namespace BlockBusted.Models
 
                             con.Close();
 
+                        }
+
+                    }
+                }
+                return datos;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
+                return null;
+            }
+        }
+
+        public DataSet Login(Usuario usuario)
+        {
+            DataSet datos = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(constr))
+                {
+                    con.Open();
+                    using (MySqlCommand command = new MySqlCommand("sp_login_usuario", con))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@i_email", (usuario.email));
+                        command.Parameters.AddWithValue("@i_password", (usuario.clave));
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(datos, "data");
+                            con.Close();
                         }
 
                     }
