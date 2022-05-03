@@ -34,10 +34,10 @@ namespace BlockBusted.Models
                 using (MySqlConnection con = new MySqlConnection(constr))
                 {
                     con.Open();
-                    using (MySqlCommand command = new MySqlCommand("sp_consulta_repuesto", con))
+                    using (MySqlCommand command = new MySqlCommand("sp_ver_lista_peliculas", con))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@i_repuesto", -1);
+                      //  command.Parameters.AddWithValue("@i_repuesto", -1);
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
                         {
                             DataTable dt = new DataTable();

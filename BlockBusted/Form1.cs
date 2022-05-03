@@ -31,10 +31,17 @@ namespace BlockBusted
                 }
                 else
                 {
-                    User_Home conn = new User_Home();
-                    conn.FormClosed += (s, args) => this.Close();
-                    conn.Show();
+                   // User_Home conn = new User_Home();
+                   // conn.FormClosed += (s, args) => this.Close();
+                    //conn.Show();
+
+                    Alquiler cn = new Alquiler();
+                    cn.FormClosed += (s, args) => this.Close();
+                    cn.Show();
+
                 }
+
+
             }
         }
 
