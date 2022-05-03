@@ -18,7 +18,7 @@ namespace BlockBusted
         {
             InitializeComponent();
             this.email = email;
-            CargarDatos();
+            CargarDatos(); 
         }
 
         private void CargarDatos()
