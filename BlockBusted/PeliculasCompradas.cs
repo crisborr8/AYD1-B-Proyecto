@@ -14,7 +14,7 @@ namespace BlockBusted
     {
         String email;
         Models.Pelicula pl = new Models.Pelicula();
-        public PeliculasCompradas(String email)
+        public PeliculasCompradas(String email) 
         {
             InitializeComponent();
             this.email = email;
