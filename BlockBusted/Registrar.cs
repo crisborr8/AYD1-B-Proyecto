@@ -25,6 +25,7 @@ namespace BlockBusted
             }
             else
             {
+                //
                 pel.insertarUsuario(this.textBox1.Text,this.txtNickname.Text,this.txtPassword.Text,this.txtNombre.Text,this.txtApellido.Text,Convert.ToInt32(this.textBox2.Text.Trim()),this.txtDPI.Text);
             }
         }
