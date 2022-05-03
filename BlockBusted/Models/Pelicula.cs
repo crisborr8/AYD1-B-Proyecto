@@ -93,5 +93,46 @@ namespace BlockBusted.Models
             }
         }
 
+
+        public int insertarUsuario(String email, String nickname, String password,String nombre, String apellido,int edad, String dpi)
+        {
+            DataSet datos = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(constr))
+                {
+                    con.Open();
+                    using (MySqlCommand command = new MySqlCommand("sp_registro_usuario", con))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@i_email", email);
+                        command.Parameters.AddWithValue("@i_usuario", nickname);
+                        command.Parameters.AddWithValue("@i_password", password);
+                        command.Parameters.AddWithValue("@i_nombre", nombre);
+                        command.Parameters.AddWithValue("@i_apellido", apellido);
+                        command.Parameters.AddWithValue("@i_dpi", dpi);
+                        command.Parameters.AddWithValue("@i_edad", edad);
+                       
+
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(datos, "data");
+
+                            con.Close();
+
+                        }
+
+                    }
+                }
+                return 1;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
+                return 0;
+            }
+        }
+
     }
 }
