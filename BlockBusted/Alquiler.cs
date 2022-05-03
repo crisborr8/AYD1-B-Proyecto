@@ -14,9 +14,11 @@ namespace BlockBusted
     {
         //Variables para la conexion 
         Models.Pelicula pl = new Models.Pelicula();
-        public Alquiler()
+        String email;
+        public Alquiler(String email)
         {
             InitializeComponent();
+            this.email = email;
             cargarDatos();
         }
 

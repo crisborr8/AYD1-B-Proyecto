@@ -43,8 +43,7 @@ namespace BlockBusted
                         if (resultado.Tables[0].Rows[0].ItemArray[0] + "" == "0")
                         {
                             this.Hide();
-                            User_Home cn = new User_Home();
-                            cn.datos = resultado.Tables[0];
+                            User_Home cn = new User_Home(resultado.Tables[0].Rows[0].ItemArray[2] + "", this.usuario.email);
                             cn.FormClosed += (s, args) => this.Close();
                             cn.Show();
                         }
@@ -66,7 +65,6 @@ namespace BlockBusted
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             Registrar conn = new Registrar();
-            conn.FormClosed += (s, args) => this.Close();
             conn.Show();
         }
     }
