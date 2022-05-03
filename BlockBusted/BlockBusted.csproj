@@ -85,6 +85,12 @@
     <Compile Include="Models\lenguaje.cs" />
     <Compile Include="Models\Pelicula.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="PeliculasCompradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeliculasCompradas.Designer.cs">
+      <DependentUpon>PeliculasCompradas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lenguajes.resx">
       <DependentUpon>Lenguajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeliculasCompradas.resx">
+      <DependentUpon>PeliculasCompradas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

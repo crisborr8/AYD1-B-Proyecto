@@ -83,6 +83,7 @@
             this.btn_Ver.TabIndex = 4;
             this.btn_Ver.Text = "Ver peliculas compradas";
             this.btn_Ver.UseVisualStyleBackColor = true;
+            this.btn_Ver.Click += new System.EventHandler(this.btn_Ver_Click);
             // 
             // btn_Transferir
             // 

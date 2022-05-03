@@ -19,6 +19,12 @@ namespace BlockBusted
             conn.Show();
         }
 
+        private void btn_Ver_Click(object sender, EventArgs e)
+        {
+            PeliculasCompradas conn = new PeliculasCompradas(this.email);
+            conn.Show();
+        }
+
         public User_Home(String usuario, String email)
         {
             InitializeComponent();
