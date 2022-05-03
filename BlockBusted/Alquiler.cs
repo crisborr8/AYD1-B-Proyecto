@@ -77,7 +77,7 @@ namespace BlockBusted
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PagoTarjeta cn = new PagoTarjeta(this.dataGridView2);
+            PagoTarjeta cn = new PagoTarjeta(this.dataGridView2,this.email);
             cn.FormClosed += (s, args) => this.Close();
             cn.Show();
 
