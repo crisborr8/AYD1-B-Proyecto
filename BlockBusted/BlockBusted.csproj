@@ -73,6 +73,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPeliculas.Designer.cs">
+      <DependentUpon>GestionPeliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lenguajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,7 @@
     <Compile Include="Models\Conexion.cs" />
     <Compile Include="Models\lenguaje.cs" />
     <Compile Include="Models\Pelicula.cs" />
+    <Compile Include="Models\PeliculaAdmin.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -118,6 +125,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionPeliculas.resx">
+      <DependentUpon>GestionPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lenguajes.resx">
       <DependentUpon>Lenguajes.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,9 +154,10 @@
       <DependentUpon>User_Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="BlockBusted.Models.lenguaje.datasource" />
-    <None Include="BlockBusted.Models.Pelicula.datasource" />
-    <None Include="BlockBusted.Models.Usuario.datasource" />
+    <None Include="BlockBusted.Models.lenguaje1.datasource" />
+    <None Include="BlockBusted.Models.Pelicula1.datasource" />
+    <None Include="BlockBusted.Models.PeliculaAdmin.datasource" />
+    <None Include="BlockBusted.Models.Usuario1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\IMAGEN4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\adminFont.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

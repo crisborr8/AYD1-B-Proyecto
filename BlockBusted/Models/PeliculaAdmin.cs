@@ -8,14 +8,21 @@ using System.Threading.Tasks;
 
 namespace BlockBusted.Models
 {
-    class lenguaje
+    class PeliculaAdmin
     {
-        public int CODIGO_LENGUAJE { get; set; }
-        public string NOMBRE_LENGUAJE { get; set; }
+        public int ID_PELICULA { get; set; }
+        public string NOMBRE { get; set; }
+        public string PRECIO_X_DIA { get; set; }
+        public string IMAGEN { get; set; }
+        public string PELICULA_ACTIVA { get; set; }
+        public string CODIGO_IDIOMA { get; set; }
+        public string IDIOMA { get; set; }
+        public string CODIGO_PLAN { get; set; }
+        public string NOMBRE_PLAN { get; set; }
 
         string constr = Conexion.ConnectionString;
 
-        public lenguaje()
+        public PeliculaAdmin()
         {
 
         }
@@ -28,39 +35,7 @@ namespace BlockBusted.Models
                 using (MySqlConnection con = new MySqlConnection(constr))
                 {
                     con.Open();
-                    using (MySqlCommand command = new MySqlCommand("sp_ver_lenguajes", con))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-                        //command.Parameters.AddWithValue("@i_repuesto", -1);
-                        using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
-                        {
-                            DataTable dt = new DataTable();
-                            sda.Fill(datos, "data");
-
-                            con.Close();
-
-                        }
-
-                    }
-                }
-                return datos;
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
-                return null;
-            }
-        }
-
-        public DataSet consultaPlanes()
-        {
-            DataSet datos = new DataSet();
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(constr))
-                {
-                    con.Open();
-                    using (MySqlCommand command = new MySqlCommand("sp_ver_planes_alquiler", con))
+                    using (MySqlCommand command = new MySqlCommand("sp_ver_lista_peliculas", con))
                     {
                         command.CommandType = CommandType.StoredProcedure;
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
@@ -83,7 +58,7 @@ namespace BlockBusted.Models
             }
         }
 
-        public int Insert(lenguaje ln)
+        public int Insert(PeliculaAdmin pl)
         {
             int id = 0;
             DataSet datos = new DataSet();
@@ -92,10 +67,15 @@ namespace BlockBusted.Models
                 using (MySqlConnection con = new MySqlConnection(constr))
                 {
                     con.Open();
-                    using (MySqlCommand command = new MySqlCommand("sp_crear_lenguaje", con))
+                    using (MySqlCommand command = new MySqlCommand("sp_crear_pelicula", con))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@i_nombre", ln.NOMBRE_LENGUAJE);                     
+                        command.Parameters.AddWithValue("@i_nombre", pl.NOMBRE);
+                        command.Parameters.AddWithValue("@i_imagen", pl.IMAGEN);
+                        command.Parameters.AddWithValue("@i_precio_x_dia", pl.PRECIO_X_DIA);
+                        command.Parameters.AddWithValue("@i_pelicula_activa", pl.PELICULA_ACTIVA);
+                        command.Parameters.AddWithValue("@i_lenguaje", pl.CODIGO_IDIOMA);
+                        command.Parameters.AddWithValue("@i_plan_alquiler", pl.CODIGO_PLAN);
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
                         {
@@ -118,7 +98,7 @@ namespace BlockBusted.Models
             }
         }
 
-        public int Update(lenguaje ln)
+        public int Update(PeliculaAdmin pl)
         {
             int id = 0;
             DataSet datos = new DataSet();
@@ -127,13 +107,16 @@ namespace BlockBusted.Models
                 using (MySqlConnection con = new MySqlConnection(constr))
                 {
                     con.Open();
-                    using (MySqlCommand command = new MySqlCommand("sp_editar_lenguaje", con))
+                    using (MySqlCommand command = new MySqlCommand("sp_editar_pelicula", con))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@i_id", Convert.ToInt32(ln.CODIGO_LENGUAJE));
-                        command.Parameters.AddWithValue("@i_nombre", ln.NOMBRE_LENGUAJE);
+                        command.Parameters.AddWithValue("@i_pelicula", pl.ID_PELICULA);
+                        command.Parameters.AddWithValue("@i_nombre", pl.NOMBRE);
+                        command.Parameters.AddWithValue("@i_imagen", pl.IMAGEN);
+                        command.Parameters.AddWithValue("@i_precio_x_dia", pl.PRECIO_X_DIA);
+                        command.Parameters.AddWithValue("@i_pelicula_activa", pl.PELICULA_ACTIVA);
+                        command.Parameters.AddWithValue("@i_lenguaje", pl.CODIGO_IDIOMA);
+                        command.Parameters.AddWithValue("@i_plan_alquiler", pl.CODIGO_PLAN);
 
                         using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
                         {

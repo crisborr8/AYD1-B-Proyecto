@@ -18,8 +18,6 @@ namespace BlockBusted
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Lenguajes len = new Lenguajes();
-            len.Show();
             if (txtContraseña.Text.Trim() == "" || txtUsuario.Text.Trim() == "")
                 MessageBox.Show("Existen espacios vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
