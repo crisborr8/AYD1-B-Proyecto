@@ -52,9 +52,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Usuario o correo";
+            this.label2.Text = "Correo";
             // 
             // btnIngresar
             // 

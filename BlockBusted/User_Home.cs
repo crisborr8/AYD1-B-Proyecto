@@ -11,6 +11,7 @@ namespace BlockBusted
 {
     public partial class User_Home : Form
     {
+        public DataTable datos;
         public User_Home()
         {
             InitializeComponent();
