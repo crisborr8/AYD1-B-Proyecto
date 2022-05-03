@@ -183,6 +183,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
@@ -196,6 +198,7 @@
             this.Column16});
             this.dataGridView2.Location = new System.Drawing.Point(55, 462);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(977, 183);
@@ -206,6 +209,7 @@
             this.Column10.HeaderText = "CODIGO";
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             this.Column10.Width = 125;
             // 
             // NOMBRE
@@ -213,6 +217,7 @@
             this.NOMBRE.HeaderText = "NOMBRE";
             this.NOMBRE.MinimumWidth = 6;
             this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
             this.NOMBRE.Width = 125;
             // 
             // Column11
@@ -220,6 +225,7 @@
             this.Column11.HeaderText = "PRECIOXDIA";
             this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             this.Column11.Width = 125;
             // 
             // IMAGEN
@@ -227,6 +233,7 @@
             this.IMAGEN.HeaderText = "IMAGEN";
             this.IMAGEN.MinimumWidth = 6;
             this.IMAGEN.Name = "IMAGEN";
+            this.IMAGEN.ReadOnly = true;
             this.IMAGEN.Width = 125;
             // 
             // Column12
@@ -234,6 +241,7 @@
             this.Column12.HeaderText = "DISPONIBLE";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             this.Column12.Width = 125;
             // 
             // Column13
@@ -241,6 +249,7 @@
             this.Column13.HeaderText = "CODIGO_IDIOMA";
             this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
             this.Column13.Width = 125;
             // 
             // Column14
@@ -248,6 +257,7 @@
             this.Column14.HeaderText = "IDIOMA";
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
             this.Column14.Width = 125;
             // 
             // Column15
@@ -255,6 +265,7 @@
             this.Column15.HeaderText = "CODIGOPLAN";
             this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
             this.Column15.Width = 125;
             // 
             // Column16
@@ -262,6 +273,7 @@
             this.Column16.HeaderText = "PLAN";
             this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
             this.Column16.Width = 125;
             // 
             // button2
