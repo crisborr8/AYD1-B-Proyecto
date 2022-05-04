@@ -83,7 +83,7 @@
             this.btn_Ver.Name = "btn_Ver";
             this.btn_Ver.Size = new System.Drawing.Size(196, 30);
             this.btn_Ver.TabIndex = 4;
-            this.btn_Ver.Text = "Ver peliculas compradas";
+            this.btn_Ver.Text = "Ver peliculas actuales";
             this.btn_Ver.UseVisualStyleBackColor = true;
             this.btn_Ver.Click += new System.EventHandler(this.btn_Ver_Click);
             // 

@@ -28,7 +28,8 @@ namespace BlockBusted
             DataTable dt = a.Tables[0];
             foreach (DataRow dr in dt.Rows)
             {
-                this.dgv_Peliculas.Rows.Add(dr.ItemArray);
+                if (dr.ItemArray[6].ToString() == "ACTIVO")
+                    this.dgv_Peliculas.Rows.Add(dr.ItemArray);
             }
         }
     }
