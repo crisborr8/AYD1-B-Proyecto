@@ -24,3 +24,29 @@ D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\AYD1-B-Proyecto
 D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\AYD1-B-Proyecto\BlockTest\obj\Debug\BlockTest.csproj.CopyComplete
 D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\AYD1-B-Proyecto\BlockTest\obj\Debug\BlockTest.dll
 D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\AYD1-B-Proyecto\BlockTest\obj\Debug\BlockTest.pdb
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\es\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\BlockTest.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\BlockTest.pdb
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\BlockBusted.exe
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\MySql.Data.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\BlockBusted.pdb
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\BlockBusted.exe.config
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\bin\Debug\MySql.Data.xml
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\obj\Debug\BlockTest.csproj.AssemblyReference.cache
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\obj\Debug\BlockTest.csproj.CoreCompileInputs.cache
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\obj\Debug\BlockTest.csproj.CopyComplete
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\obj\Debug\BlockTest.dll
+D:\U\Semestre 1\Análisis y diseño de sistemas 1 - Lab\Proyecto\Nueva carpeta\AYD1-B-Proyecto\BlockTest\obj\Debug\BlockTest.pdb

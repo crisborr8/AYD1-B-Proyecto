@@ -37,6 +37,7 @@
             this.btn_Alquilar = new System.Windows.Forms.Button();
             this.btn_Retornar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -122,11 +123,22 @@
             this.btn_Editar.Text = "Editar datos";
             this.btn_Editar.UseVisualStyleBackColor = true;
             // 
+            // btn_Salir
+            // 
+            this.btn_Salir.Location = new System.Drawing.Point(18, 194);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(109, 30);
+            this.btn_Salir.TabIndex = 9;
+            this.btn_Salir.Text = "Salir";
+            this.btn_Salir.UseVisualStyleBackColor = true;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
+            // 
             // User_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 259);
+            this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Retornar);
             this.Controls.Add(this.btn_Alquilar);
@@ -155,5 +167,6 @@
         private System.Windows.Forms.Button btn_Alquilar;
         private System.Windows.Forms.Button btn_Retornar;
         private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }
