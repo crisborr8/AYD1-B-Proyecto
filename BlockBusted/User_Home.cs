@@ -25,6 +25,20 @@ namespace BlockBusted
             conn.Show();
         }
 
+        private void btn_Transferir_Click(object sender, EventArgs e)
+        {
+            Transferencia conn = new Transferencia(this.email);
+            conn.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 conn = new Form1();
+            conn.FormClosed += (s, args) => this.Close();
+            conn.Show();
+        }
+
         public User_Home(String usuario, String email)
         {
             InitializeComponent();
