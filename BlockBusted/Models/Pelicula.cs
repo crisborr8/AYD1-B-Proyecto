@@ -26,6 +26,39 @@ namespace BlockBusted.Models
 
         }
 
+        public DataSet transferir(String email1, String email2, int id)
+        {
+            DataSet datos = new DataSet();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(constr))
+                {
+                    con.Open();
+                    using (MySqlCommand command = new MySqlCommand("sp_transferir_peliculas", con))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@i_email_propietario", email1);
+                        command.Parameters.AddWithValue("@i_email_amigo", email2);
+                        command.Parameters.AddWithValue("@i_pelicula", id);
+                        using (MySqlDataAdapter sda = new MySqlDataAdapter(command))
+                        {
+                            DataTable dt = new DataTable();
+                            sda.Fill(datos, "data");
+
+                            con.Close();
+
+                        }
+
+                    }
+                }
+                return datos;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error" + ex.Number + " has occurred: " + ex.Message);
+                return null;
+            }
+        }
         public DataSet getPeliculasCompradas(String email)
         {
             DataSet datos = new DataSet();
