@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F961EF60-6B3C-4E0F-AC6A-0D1044E229B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BlockBusted</RootNamespace>
+    <AssemblyName>BlockBusted</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Home.Designer.cs">
+      <DependentUpon>Admin_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alquiler.Designer.cs">
+      <DependentUpon>Alquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Historial.Designer.cs">
+      <DependentUpon>Historial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lenguajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lenguajes.Designer.cs">
+      <DependentUpon>Lenguajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Conexion.cs" />
+    <Compile Include="Models\lenguaje.cs" />
+    <Compile Include="Models\Pelicula.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="PeliculasCompradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeliculasCompradas.Designer.cs">
+      <DependentUpon>PeliculasCompradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transferencia.Designer.cs">
+      <DependentUpon>Transferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PagoTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagoTarjeta.Designer.cs">
+      <DependentUpon>PagoTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar.Designer.cs">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Home.Designer.cs">
+      <DependentUpon>User_Home.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin_Home.resx">
+      <DependentUpon>Admin_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alquiler.resx">
+      <DependentUpon>Alquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historial.resx">
+      <DependentUpon>Historial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lenguajes.resx">
+      <DependentUpon>Lenguajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeliculasCompradas.resx">
+      <DependentUpon>PeliculasCompradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transferencia.resx">
+      <DependentUpon>Transferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagoTarjeta.resx">
+      <DependentUpon>PagoTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registrar.resx">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Home.resx">
+      <DependentUpon>User_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="BlockBusted.Models.lenguaje.datasource" />
+    <None Include="BlockBusted.Models.Pelicula.datasource" />
+    <None Include="BlockBusted.Models.Usuario.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\IMAGEN3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\imagen1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\IMAGEN2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\IMAGEN4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
