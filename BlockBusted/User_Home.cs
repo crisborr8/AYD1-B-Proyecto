@@ -39,6 +39,12 @@ namespace BlockBusted
             conn.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Historial conn = new Historial(this.email);
+            conn.Show();
+        }
+
         public User_Home(String usuario, String email)
         {
             InitializeComponent();
