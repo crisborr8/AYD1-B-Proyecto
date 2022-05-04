@@ -27,10 +27,13 @@ namespace BlockBusted
             DataTable dt = a.Tables[0];
             foreach (DataRow dr in dt.Rows)
             {
-                CbItem item = new CbItem();
-                item.Text = dr.ItemArray[1].ToString();
-                item.Value = dr.ItemArray[0];
-                this.cb_peliculas.Items.Add(item);
+                if (dr.ItemArray[6].ToString() == "ACTIVO")
+                {
+                    CbItem item = new CbItem();
+                    item.Text = dr.ItemArray[1].ToString();
+                    item.Value = dr.ItemArray[0];
+                    this.cb_peliculas.Items.Add(item);
+                }
             }
             this.cb_peliculas.SelectedIndex = 0;
         }
