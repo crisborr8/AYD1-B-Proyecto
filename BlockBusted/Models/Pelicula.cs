@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BlockBusted.Models
 {
-    class Pelicula
+    public class Pelicula
     {
         public int CODIGO { get; set; }
         public string NOMBRE_PELICULA { get; set; }
